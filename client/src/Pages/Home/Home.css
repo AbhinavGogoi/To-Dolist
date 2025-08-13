@@ -1,0 +1,131 @@
+.home-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  grid-template-rows: auto;
+  padding: 2em;
+  height: 100vh;
+  grid-template-areas: "description image";
+}
+.home-container > .image {
+  grid-area: image;
+  border-radius: 1em;
+}
+.home-container > .description {
+  grid-area: description;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "heading heading"
+    "review review";
+}
+
+.home-container > .description > .heading {
+  grid-area: heading;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.home-container > .description > .heading > h1 {
+  font-size: 4em;
+  margin: 0.5em 0;
+}
+.home-container > .description > .heading > .welcome {
+  background-color: orange;
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  font-weight: 1em;
+}
+.heading > .buttons > button {
+  padding: 2em;
+  border-radius: 0.9em;
+  margin: 1em;
+}
+.heading > .buttons > button:nth-child(1) {
+  background-color: rgb(20, 20, 20);
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+.heading > .buttons > button:nth-child(1):hover {
+  scale: 1.1;
+  background-color: rgb(20, 20, 20);
+  color: white;
+  box-shadow: 0 0 0.5em rgba(13, 12, 12, 0.5);
+  cursor: pointer;
+}
+.heading > .buttons > button:nth-child(2):hover {
+  scale: 1.1;
+  background-color: rgb(255, 143, 57);
+  color: Black;
+  box-shadow: 0 0 0.5em rgba(13, 12, 12, 0.5);
+  cursor: pointer;
+}
+.heading > .buttons > button:nth-child(2) {
+  background-color: rgb(255, 143, 57);
+  color: Black;
+}
+.home-container > .description > .review {
+  grid-area: review;
+  display: flex;
+  gap: 0.5em;
+  padding: 0.5em;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-container > .description > .review > .cards {
+  background-color: rgb(22, 22, 62);
+  color: white;
+  min-height: 5em;
+  padding: 2em;
+  overflow: hidden;
+  border-radius: 2em;
+}
+
+.home-container > .description > .review > .cards > .rate {
+  padding: 1em;
+}
+.home-container>.image>.card-container {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  margin-left: 8em;
+  margin-top: 60px;
+}
+.home-container>.image>.card-container>.card {
+  position: absolute;
+  width: 400px;
+  height: 550px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, z-index 0.4s ease;
+}
+
+.home-container>.image>.card-container>.card1 {
+  z-index: 3;
+  transform: rotate(0deg) translate(0, 0);
+}
+
+.home-container>.image>.card-container>.card2 {
+  z-index: 2;
+  transform: rotate(-10deg) translate(-60px, 40px);
+}
+
+.home-container>.image>.card-container>.card3 {
+   z-index: 1;
+  transform: rotate(10deg) translate(60px, 40px);
+}
+.home-container>.image>.card-container>.card:hover {
+  transform: scale(1.05) translate(0, -10px);
+  z-index: 5;
+}
+.menu{
+  position: absolute;
+  padding: 0.6em;
+  font-size: 1.5em;
+  cursor: pointer;
+}

@@ -1,0 +1,18 @@
+@import "tailwindcss";
+.task{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20em;
+    background-color: rgba(247, 246, 246, 0.05);
+    border-radius: 1em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2em;
+    margin: 1em;
+}

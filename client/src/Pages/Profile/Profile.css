@@ -1,0 +1,107 @@
+.profile-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(135, 75, 7, 0.1),
+    rgba(115, 80, 10, 0.8)
+  );
+}
+.loading-container {
+    height: 100dvh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+.loading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 84px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  span {
+    display: inline-block;
+    margin: 0 -.05em;
+  }
+}
+.loading04 span {
+  animation: loading04 2.5s ease-in-out infinite;
+  text-shadow: 0px 60px 10px rgba(0, 0, 0, 0.3);
+  display: inline-block;
+}
+
+.loading04 span:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.loading04 span:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.loading04 span:nth-child(4) {
+  animation-delay: 0.9s;
+}
+.loading04 span:nth-child(5) {
+  animation-delay: 1.2s;
+}
+.loading04 span:nth-child(6) {
+  animation-delay: 1.5s;
+}
+.loading04 span:nth-child(7) {
+  animation-delay: 1.8s;
+}
+@keyframes loading04 {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-15px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+}
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  min-width: 10em;
+  background-color: transparent;
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.profile-tasks>.tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9em;
+  gap: 1em;
+  min-width: 10em;
+  font-size: 2.1em;
+}
+.profile-tasks>.tasks>.cards{
+  background-color: rgba(22, 22, 62, 0.05);
+  color: white;
+  box-shadow: 0 0 0.5em rgba(13, 12, 12, 0.2);
+  padding: 1em;
+  width: 100%;
+  border-radius: 1em;
+  transition: all 0.4s ease-in-out;
+}
+.profile-tasks>.tasks>.cards:hover {
+  scale: 1.05;
+  background-color: rgba(22, 22, 62, 0.1);
+  cursor: pointer;
+  box-shadow: inset 0 0 0.5em rgba(13, 12, 12, 0.5) ;
+}
